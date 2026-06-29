@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Ora2Pg v24.3 - Database Migration Report
+-------------------------------------------------------------------------------
+Version	Oracle Database 21c Express Edition Release 21.0.0.0.0
+Schema	RETAIL
+Size	0.69 MB
+
+-------------------------------------------------------------------------------
+Object	Number	Invalid	Estimated cost	Comments	Details
+-------------------------------------------------------------------------------
+DATABASE LINK	0	0	0.00	Database links will be exported as SQL/MED PostgreSQL's Foreign Data Wrapper (FDW) extensions using oracle_fdw.	
+GLOBAL TEMPORARY TABLE	0	0	0.00	Global temporary table are not supported by PostgreSQL and will not be exported. You will have to rewrite some application code to match the PostgreSQL temporary table behavior.	
+JOB	0	0	0.00	Job are not exported. You may set external cron job with them.	
+SYNONYM	0	0	0.00	SYNONYMs will be exported as views. SYNONYMs do not exists with PostgreSQL but a common workaround is to use views or set the PostgreSQL search_path in your session to access object outside the current schema.	
+TABLE	5	0	1.00	
+5 identity column(s).
+ Identity columns are fully supported since PG10.
+	Total number of rows: 5. Top 10 of tables sorted by number of rows:. orders has 1 rows. customers has 1 rows. products has 1 rows. inventory has 1 rows. order_items has 1 rows. Top 10 of largest tables:. 
+-------------------------------------------------------------------------------
+Total	5	0	1.00	1.00 cost migration units means approximatively 1 person-day(s). The migration unit was set to 5 minute(s)
+
+-------------------------------------------------------------------------------
+Migration level : A-1
+-------------------------------------------------------------------------------
+
+Migration levels:
+    A - Migration that might be run automatically
+    B - Migration with code rewrite and a human-days cost up to 5 days
+    C - Migration with code rewrite and a human-days cost above 5 days
+Technical levels:
+    1 = trivial: no stored functions and no triggers
+    2 = easy: no stored functions but with triggers, no manual rewriting
+    3 = simple: stored functions and/or triggers, no manual rewriting
+    4 = manual: no stored functions but with triggers or views with code rewriting
+    5 = difficult: stored functions and/or triggers with code rewriting
+-------------------------------------------------------------------------------
