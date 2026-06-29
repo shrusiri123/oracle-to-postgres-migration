@@ -42,6 +42,8 @@ pg_cursor.execute("SELECT version();")
 pg_version = pg_cursor.fetchone()
 print("PostgreSQL version:", pg_version[0])
 
+pg_cursor.execute("SET search_path TO retail, public;")
+print("Search path set to retail schema ✓")
 
 # Close all connections
 pg_cursor.close()
