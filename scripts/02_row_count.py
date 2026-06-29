@@ -56,3 +56,9 @@ for table in tables:
 
 print("-" * 55)
 print("Validation complete!")
+
+# Close connections
+ora_conn.close()
+pg_conn.close()
+print("=== All rowcounts are validated successfully! ===")
+print("All connections closed ✓")
